@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <title>My</title>
-    <H3>나의 웹(0317137263, 김규호)</H3>
+    <H3>나의 웹(2567013, 박서정)</H3>
     <script src="https://unpkg.com/mqtt/dist/mqtt.min.js"></script>
     <script>
         const brokerUrl = 'wss://damoa.io:9002';
@@ -25,7 +25,7 @@
             console.log(`✅ 접속 성공! (클라이언트 ID: ${clientId})`);
     
             // 2. 접속 성공 후 토픽 구독
-            const topic = `ewha/0317137263`; // 다른 사용자와 겹치지 않도록 고유한 토픽 사용, 본인학번으로 수정
+            const topic = `ewha/2567013`; // 다른 사용자와 겹치지 않도록 고유한 토픽 사용, 본인학번으로 수정
             client.subscribe(topic, (err) => {
                 if (!err) {
                     console.log(`📄 토픽 구독 성공: ${topic}`);
@@ -34,7 +34,7 @@
                     //const message = 'Hello, MQTT from browser!';
                     //console.log(`🚀 메시지 발행: "${message}"`);
                     //client.publish(topic, message);
-                    client.publish('ewha/checkin', "본인학번 이름");
+                    client.publish('ewha/checkin', "2567013 박서정");
                 } else {
                     console.error('토픽 구독 오류:', err);
                 }
